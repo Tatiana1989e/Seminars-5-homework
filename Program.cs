@@ -70,3 +70,31 @@ int randomNumbers = RandomNumbers(elementNumber, 1, 10);
 
 Console.WriteLine($"The sum of the elements standing in odd positions: {randomNumbers}");
 */
+
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+double[] arrayRandomNumbers = new double[10];
+  for (int i = 0; i < arrayRandomNumbers.Length; i++ )
+  {
+    arrayRandomNumbers[i] = new Random().Next(1, 100);
+    Console.Write(arrayRandomNumbers[i] + " ");
+  }
+
+double maxNumber = arrayRandomNumbers[0];
+double minNumber = arrayRandomNumbers[0];
+
+  for (int i = 1; i < arrayRandomNumbers.Length; i++)
+  {
+    if (maxNumber < arrayRandomNumbers[i])
+    {
+      maxNumber = arrayRandomNumbers[i];
+    }
+        if (minNumber > arrayRandomNumbers[i])
+    {
+      minNumber = arrayRandomNumbers[i];
+    }
+  }
+
+  double result = maxNumber - minNumber;
+
+  Console.WriteLine($"The difference between max ({maxNumber}) и min ({minNumber}) elements: {result}");
