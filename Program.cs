@@ -40,4 +40,33 @@ Console.WriteLine();
 int quantity = QuantityPositive(numbers);
 Console.WriteLine($"The number of even numbers in the array: {quantity}");
 */
+/*
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
+Console.Write($"Input the number of array elements: ");
+int numberElements = Convert.ToInt32(Console.ReadLine()); 
+
+int RandomNumbers(int elementNumber, int min, int max)
+  {
+  int[] randomNumbers = new int[elementNumber];
+  int sumElements = 0;
+  Console.Write("Array: ");
+
+    for (int i = 0; i <randomNumbers.Length; i++)
+    {
+      randomNumbers[i] = new Random().Next(min, max);
+
+      Console.Write(randomNumbers[i] + " ");
+
+      if (i % 2 != 1)
+      {
+        sumElements = sumElements + randomNumbers[i];
+      }
+    }
+  return sumElements;
+  }
+
+int randomNumbers = RandomNumbers(elementNumber, 1, 10);
+
+Console.WriteLine($"The sum of the elements standing in odd positions: {randomNumbers}");
+*/
